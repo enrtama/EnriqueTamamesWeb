@@ -1,6 +1,6 @@
 'use strict';
 
-//Menu service used for managing  menus
+// Menu service used for managing menus
 angular.module('core').service('Menus', [
 
 	function() {
@@ -160,7 +160,7 @@ angular.module('core').service('Menus', [
 			return this.menus[menuId];
 		};
 
-		//Adding the topbar menu
+		// Adding the topbar menu
 		this.addMenu('topbar');
 	}
 ]);
