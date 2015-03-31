@@ -11,7 +11,7 @@ body {
 }
 
 .footer {
-	position: absolute;
+	position: fixed;
 	bottom: 0;
 	width: 100%;
 	/* Set the fixed height of the footer here */
@@ -34,4 +34,40 @@ body {
 }
 .ng-valid.ng-dirty {
 	border-color: #78FA89;
+}
+
+#home nav {
+	position: fixed;
+	z-index: 1;
+	top: 40%;
+	right: 0;
+	background: #fff;
+	background: rgba(255, 255, 255, 0.8);
+}
+#home nav li, nav ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	text-align: center
+}
+#home nav li, nav a {
+	display: block;
+}
+#home nav a {
+	padding: 20px;
+	color: #333;
+	text-decoration: none;
+}
+a:hover {
+	background: #fff;
+}
+a.active {
+	background: #00AC7F;
+	color: #fff;
+}
+
+/* Sections */
+
+section{
+	height:500px;
 }
