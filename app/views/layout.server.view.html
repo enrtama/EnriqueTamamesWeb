@@ -33,9 +33,12 @@
 
 	<!-- Fav Icon -->
 	<link href="/modules/core/img/brand/favicon.ico" rel="shortcut icon" type="image/x-icon">
-
+	
 	<!--Application CSS Files-->
 	{% for cssFile in cssFiles %}<link rel="stylesheet" href="{{cssFile}}">{% endfor %}
+
+	<!-- Add jQuery to our project -->
+	<script src="lib/jquery/dist/jquery.min.js"></script>
 
 	<!-- HTML5 Shim -->
 	<!--[if lt IE 9]>
