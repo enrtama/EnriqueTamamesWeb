@@ -4,21 +4,29 @@
 angular.module('core')
 	.value('duScrollDuration', 500)
 	.value('duScrollOffset', 30)
-	.controller('HomeController', ['$scope', '$document', 'Authentication',
-	function($scope, $document, Authentication) {
+	.controller('HomeController', ['$scope', 'Authentication',
+	function($scope, Authentication) {
 		// This provides Authentication context.
 		$scope.authentication = Authentication;
-
-		var container = angular.element(document.querySelector('#container'));
-		var section2 = angular.element(document.querySelector('#section-2'));
+		$scope.container = angular.element(document.querySelector('#rightColumn'));
+		$scope.sections = angular.element($('.section').css('height', window.screen.availHeight));
+		$scope.myInterval = 2000;
 
 		$scope.toTheTop = function() {
-			container.scrollTop(0, 5000);
+			$scope.container.scrollTop(0, 500);
 		};
 
-		$scope.toSection2 = function() {
-			container.scrollTo(section2, 0, 1000);
+		// Add Carousel
+		var slides = $scope.slides = [];
+		$scope.addSlide = function() {
+			var newWidth = 600 + slides.length + 1;
+			slides.push({
+				image: 'http://placekitten.com/' + newWidth + '/300',
+				text: ['More','Extra','Lots of','Surplus'][slides.length % 4] + ' ' + ['Cats', 'Kittys', 'Felines', 'Cutes'][slides.length % 4]
+			});
 		};
-
+		for (var i = 0; i < 4; i++) {
+			$scope.addSlide();
+		}
 	}
 ]);

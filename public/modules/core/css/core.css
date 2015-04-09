@@ -21,7 +21,8 @@ body {
 }
 
 .content {
-	margin-top: 50px;
+	width: 900px;
+	margin: 50px auto;
 }
 .undecorated-link:hover {
 	text-decoration: none;
@@ -64,10 +65,4 @@ a:hover {
 a.active {
 	background: #00AC7F;
 	color: #fff;
-}
-
-/* Sections */
-
-section{
-	height:500px;
 }

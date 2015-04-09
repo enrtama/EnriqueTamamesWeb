@@ -21,25 +21,29 @@
 			</p>
 		</div>
 	</div>
-	<div>
-		<h2>Congrats! You've configured and run the sample application.</h2>
-		<p>MEAN.JS is a web application boilerplate, which means you should start changing everything :-)</p>
-		<p>This sample application tracks users and articles.</p>
-	</div>
-	</div>enrtama Team.
 
-	<div id="container" du-scroll-container>
-		<section id="section-1">
+	<div id="rightColumn" du-scroll-container>
+		<section id="section-1" class="section">
 			<h2>Section 1</h2>
-			<p></p>
+			<div>
+				<carousel class="carousel" interval="myInterval">
+				<slide ng-repeat="slide in slides" active="slide.active">
+					<img ng-src="{{slide.image}}" style="margin:auto;">
+					<div class="carousel-caption">
+						<h4>Slide {{$index}}</h4>
+						<p>{{slide.text}}</p>
+					</div>
+				</slide>
+				</carousel>
+			</div>
 		</section>
 
-		<section id="section-2">
+		<section id="section-2" class="section">
 			<h2>Section 2</h2>
 			<p></p>
 		</section>
 
-		<section id="section-3">
+		<section id="section-3" class="section">
 			<h2>Section 3</h2>
 			<p></p>
 		</section>
