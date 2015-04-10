@@ -21,6 +21,17 @@
 			</p>
 		</div>
 	</div>
+    
+	<div class="examples">
+		<h1>Examples</h1>
+		<!-- Click event -->
+		<button class="btn btn-success" ng-click="showMessage()">Click me!</button>
+		<!-- Alerts -->
+		<alert ng-repeat="alert in alerts" type="{{alert.type}}" close="closeAlert($index)">{{alert.msg}}</alert>
+		<button class='btn btn-default' ng-click="addAlert()">Add Alert</button>
+		<!-- Modal window -->
+		<button class="btn btn-default" ng-click="open()">Open me!</button>
+	</div>
 
 	<div id="rightColumn" du-scroll-container>
 		<section id="section-1" class="section">
