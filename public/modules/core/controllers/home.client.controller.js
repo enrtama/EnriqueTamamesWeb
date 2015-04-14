@@ -3,8 +3,8 @@
 angular.module('core')
 	.value('duScrollDuration', 500)
 	.value('duScrollOffset', 30)
-	.controller('HomeController', ['$scope', 'Authentication', '$modal', '$log',
-	function($scope, Authentication, $modal, $log) {
+	.controller('HomeController', ['$scope', 'Authentication', '$modal', '$log', '$translate', 
+		function($scope, Authentication, $modal, $log, $translate) {
 		// This provides Authentication context.
 		$scope.authentication = Authentication;
 		$scope.items = ['item1', 'item2', 'item3'];
@@ -15,6 +15,18 @@ angular.module('core')
 			{ type: 'danger', msg: 'Oh snap! Change a few things up and try submitting again.' },
 			{ type: 'success', msg: 'Well done! You successfully read this important alert message.' }
 		];
+
+		// Translation settings
+		$scope.changeLanguage = function (key) {
+			$translate.use(key);
+		};
+
+		$translate(['TITLE', 'TEXT', 'BUTTON_LANG_EN', 'BUTTON_LANG_ES']).then(function (translations) {
+			$scope.title = translations.TITLE;
+			$scope.text = translations.TEXT;
+			$scope.buttonEnglish = translations.BUTTON_LANG_EN;
+			$scope.buttonSpanish = translations.BUTTON_LANG_ES;
+		});
 
 		$scope.toTheTop = function() {
 			$scope.container.scrollTop(0, 500);
@@ -47,7 +59,6 @@ angular.module('core')
 		};
 
 		// Modal
-
 		$scope.open = function (size) {
 			var modalInstance = $modal.open({
 				templateUrl: 'modules/core/views/modal.client.view.html',
