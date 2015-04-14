@@ -15,6 +15,9 @@ angular.module('core')
 			{ type: 'danger', msg: 'Oh snap! Change a few things up and try submitting again.' },
 			{ type: 'success', msg: 'Well done! You successfully read this important alert message.' }
 		];
+		$scope.user = {
+			name: 'awesome user'
+		}; 
 
 		$scope.toTheTop = function() {
 			$scope.container.scrollTop(0, 500);
@@ -47,7 +50,6 @@ angular.module('core')
 		};
 
 		// Modal
-
 		$scope.open = function (size) {
 			var modalInstance = $modal.open({
 				templateUrl: 'modules/core/views/modal.client.view.html',
@@ -68,3 +70,9 @@ angular.module('core')
 		};
 	}
 ]);
+
+angular.module('core')
+	.run(function(editableOptions) {
+		editableOptions.theme = 'bs3'; // bootstrap3 theme. Can be also 'bs2', 'default'
+	}
+);
