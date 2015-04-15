@@ -37,7 +37,7 @@ body {
 	border-color: #78FA89;
 }
 
-#home nav {
+.home nav {
 	position: fixed;
 	z-index: 1;
 	top: 40%;
@@ -45,16 +45,16 @@ body {
 	background: #fff;
 	background: rgba(255, 255, 255, 0.8);
 }
-#home nav li, nav ul {
+.home nav li, nav ul {
 	list-style: none;
 	margin: 0;
 	padding: 0;
 	text-align: center
 }
-#home nav li, nav a {
+.home nav li, nav a {
 	display: block;
 }
-#home nav a {
+.home nav a {
 	padding: 20px;
 	color: #333;
 	text-decoration: none;
