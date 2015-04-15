@@ -3,8 +3,8 @@
 angular.module('core')
 	.value('duScrollDuration', 500)
 	.value('duScrollOffset', 30)
-	.controller('HomeController', ['$scope', 'Authentication', '$modal', '$log', '$translate', 
-		function($scope, Authentication, $modal, $log, $translate) {
+	.controller('HomeController', ['$scope', 'Authentication', '$modal', '$log', '$translate', 'toasty',
+		function($scope, Authentication, $modal, $log, $translate, toasty) {
 		// This provides Authentication context.
 		$scope.authentication = Authentication;
 		$scope.items = ['item1', 'item2', 'item3'];
@@ -78,6 +78,16 @@ angular.module('core')
 				$scope.selected = selectedItem;
 			}, function () {
 				$log.info('Modal dismissed at: ' + new Date());
+			});
+		};
+
+		// Toast example
+		$scope.openToast = function() {
+			toasty.pop.success({
+				title: 'Your comment has been successfully added!',
+				sound: false,
+				showClose: true,
+				clickToClose: false
 			});
 		};
 	}

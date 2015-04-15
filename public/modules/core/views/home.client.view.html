@@ -1,5 +1,5 @@
-<section id="home" data-ng-controller="HomeController">
-
+<section class="home" data-ng-controller="HomeController">
+	<toasty-container toasty-defaults='{"close-button":true}'></toasty-container>
 	<nav>
 		<ul id="rightPanel">
 			<li><a href="#section-1" du-smooth-scroll du-scrollspy>Section 1</a></li>
@@ -40,6 +40,10 @@
 		</div>
 		<button translate class="btn ng-scope" ng-click="changeLanguage('en')" translate="BUTTON_LANG_EN">BUTTON_LANG_EN</button>
 		<button class="btn ng-scope" ng-click="changeLanguage('es')" translate="BUTTON_LANG_ES">BUTTON_LANG_ES</button>
+		<!-- Toast -->
+		</div>
+			<button class="btn btn-primary" ng-click="openToast()">Open toast!</button>
+		</div>
 	</div>
 
 	<div id="rightColumn" du-scroll-container>
