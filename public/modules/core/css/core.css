@@ -17,7 +17,7 @@ body {
 	/* Set the fixed height of the footer here */
 	height: 50px;
 	background-color: #EEE;
-	padding: 10px 70px 10px 70px;
+	padding: 10px 130px 10px 130px;
 }
 
 .content {
@@ -35,6 +35,10 @@ body {
 }
 .ng-valid.ng-dirty {
 	border-color: #78FA89;
+}
+
+.container{
+	width:1000px;
 }
 
 .home nav {
