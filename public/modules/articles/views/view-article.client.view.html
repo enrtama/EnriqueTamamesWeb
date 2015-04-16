@@ -1,22 +1,26 @@
 <section data-ng-controller="ArticlesController" data-ng-init="findOne()">
-	<div class="page-header">
-		<h1 data-ng-bind="article.title"></h1>
-	</div>
-	<div class="pull-right" data-ng-show="authentication.user._id == article.user._id">
-		<a class="btn btn-primary" href="/#!/articles/{{article._id}}/edit">
-			<i class="glyphicon glyphicon-edit"></i>
-		</a>
-		<a class="btn btn-primary" data-ng-click="remove();">
-			<i class="glyphicon glyphicon-trash"></i>
-		</a>
-	</div>
-	<small>
-		<em class="text-muted">
-			Posted on
-			<span data-ng-bind="article.created | date:'mediumDate'"></span>
-			by
-			<span data-ng-bind="article.user.displayName"></span>
-		</em>
-	</small>
-	<p class="lead" data-ng-bind="article.content"></p>
+	<form editable-form name="editableForm" onaftersave="update()">
+		<div class="page-header">
+			<h1><a href="#" data-ng-bind="article.title" editable-text="article.title">{{ article.title || "empty" }}</a></h1>
+		</div>
+		<p><a href="#" class="lead" data-ng-bind="article.content" editable-text="article.content">{{ article.content || "empty" }}</a></p>
+		<small>
+			<em class="text-muted">
+				Posted on
+				<span data-ng-bind="article.created | date:'mediumDate'"></span>
+				by
+				<span data-ng-bind="article.user.displayName"></span>
+			</em>
+		</small>
+		<!-- Buttons -->
+		<div class="buttons">
+			<!-- button to show form -->
+			<button type="button" class="btn btn-default" ng-click="editableForm.$show()" ng-show="!editableForm.$visible">Edit</button>
+			<!-- buttons to submit / cancel form -->
+			<span ng-show="editableForm.$visible">
+				<button type="submit" class="btn btn-primary" ng-disabled="editableForm.$waiting">Save</button>
+				<button type="button" class="btn btn-default" ng-disabled="editableForm.$waiting" ng-click="editableForm.$cancel()">Cancel</button>
+			</span>
+		</div>
+	</form>
 </section>
