@@ -5,6 +5,7 @@ angular.module('core')
 	.value('duScrollOffset', 30)
 	.controller('HomeController', ['$scope', 'Authentication', '$modal', '$log', '$translate', 'toasty',
 		function($scope, Authentication, $modal, $log, $translate, toasty) {
+
 		// This provides Authentication context.
 		$scope.authentication = Authentication;
 		$scope.items = ['item1', 'item2', 'item3'];

@@ -29,7 +29,9 @@ module.exports = {
 				'public/lib/jquery/dist/jquery.js',
 				'public/lib/angular-xeditable/dist/js/xeditable.js',
 				'public/lib/angular-translate/angular-translate.js',
-				'public/lib/angular-toasty/js/ng-toasty.js'
+				'public/lib/angular-toasty/js/ng-toasty.js',
+				'public/lib/moment/moment.js',
+				'public/lib/angular-bootstrap-calendar/dist/js/angular-bootstrap-calendar-tpls.min.js'
 			]
 		},
 		css: [

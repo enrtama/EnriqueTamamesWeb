@@ -1,0 +1,32 @@
+<section data-ng-controller="CalendarController">
+	<!-- Calendar example -->
+	<div class="row">
+		<div class="col-md-6 text-center">
+			<div class="btn-group">
+				<button class="btn btn-primary" ng-click="calendarControl.prev()">Previous</button>
+				<button class="btn btn-default" ng-click="setCalendarToToday()">Today</button>
+				<button class="btn btn-primary" ng-click="calendarControl.next()">Next</button>
+			</div>
+		</div>
+		<br class="visible-xs visible-sm">
+		<div class="col-md-6 text-center">
+			<div class="btn-group">
+				<label class="btn btn-primary" ng-model="calendarView" btn-radio="'year'">Year</label>
+				<label class="btn btn-primary" ng-model="calendarView" btn-radio="'month'">Month</label>
+				<label class="btn btn-primary" ng-model="calendarView" btn-radio="'week'">Week</label>
+				<label class="btn btn-primary" ng-model="calendarView" btn-radio="'day'">Day</label>
+			</div>
+		</div>
+	</div>
+	<mwl-calendar
+		events="events"
+		view-title="calendarTitle"
+		current-day="calendarDay"
+		on-event-click="eventClicked(calendarEvent)"
+		edit-event-html="'<i class=\'glyphicon glyphicon-pencil\'></i>'"
+		delete-event-html="'<i class=\'glyphicon glyphicon-remove\'></i>'"
+		on-edit-event-click="eventEdited(calendarEvent)"
+		on-delete-event-click="eventDeleted(calendarEvent)"
+		auto-open="true">
+	</mwl-calendar>
+</section>
