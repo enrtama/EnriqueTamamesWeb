@@ -20,6 +20,6 @@
     "angular-xeditable": "~0.1.9",
     "angular-translate": "~2.6.1",
     "angular-toasty": "~0.1.8",
-    "angular-bootstrap-calendar": "~0.9.2"
+    "angular-ui-calendar": "latest"
   }
 }

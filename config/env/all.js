@@ -16,6 +16,8 @@ module.exports = {
 				'public/lib/bootstrap/dist/css/bootstrap.css'
 			],
 			js: [
+				'public/lib/jquery/dist/jquery.js',
+				'public/lib/jquery-ui/ui/jquery-ui.js',
 				'public/lib/angular/angular.js',
 				'public/lib/angular-resource/angular-resource.js', 
 				'public/lib/angular-cookies/angular-cookies.js', 
@@ -26,12 +28,12 @@ module.exports = {
 				'public/lib/angular-ui-utils/ui-utils.js',
 				'public/lib/angular-bootstrap/ui-bootstrap-tpls.js',
 				'public/lib/angular-scroll/angular-scroll.js',
-				'public/lib/jquery/dist/jquery.js',
 				'public/lib/angular-xeditable/dist/js/xeditable.js',
 				'public/lib/angular-translate/angular-translate.js',
 				'public/lib/angular-toasty/js/ng-toasty.js',
-				'public/lib/moment/moment.js',
-				'public/lib/angular-bootstrap-calendar/dist/js/angular-bootstrap-calendar-tpls.min.js'
+				'public/lib/angular-ui-calendar/src/calendar.js',
+				'public/lib/fullcalendar/fullcalendar.js',
+				'public/lib/fullcalendar/gcal.js'
 			]
 		},
 		css: [
