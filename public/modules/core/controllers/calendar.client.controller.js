@@ -12,7 +12,7 @@ angular.module('core').controller('CalendarController', ['$scope', '$compile', '
 		$scope.changeTo = 'Hungarian';
 		/* event source that pulls from google.com */
 		$scope.eventSource = {
-		        url: "http://www.google.com/calendar/feeds/usa__en%40holiday.calendar.google.com/public/basic",
+		        url: 'http://www.google.com/calendar/feeds/usa__en%40holiday.calendar.google.com/public/basic',
 		        className: 'gcal-event',           // an option!
 		        currentTimezone: 'America/Chicago' // an option!
 		};
@@ -116,12 +116,12 @@ angular.module('core').controller('CalendarController', ['$scope', '$compile', '
 
 		$scope.changeLang = function() {
 		  if($scope.changeTo === 'Hungarian'){
-		    $scope.uiConfig.calendar.dayNames = ["Vasárnap", "Hétfő", "Kedd", "Szerda", "Csütörtök", "Péntek", "Szombat"];
-		    $scope.uiConfig.calendar.dayNamesShort = ["Vas", "Hét", "Kedd", "Sze", "Csüt", "Pén", "Szo"];
+		    $scope.uiConfig.calendar.dayNames = ['Vasárnap', 'Hétfő', 'Kedd', 'Szerda', 'Csütörtök', 'Péntek', 'Szombat'];
+		    $scope.uiConfig.calendar.dayNamesShort = ['Vas', 'Hét', 'Kedd', 'Sze', 'Csüt', 'Pén', 'Szo'];
 		    $scope.changeTo= 'English';
 		  } else {
-		    $scope.uiConfig.calendar.dayNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-		    $scope.uiConfig.calendar.dayNamesShort = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+		    $scope.uiConfig.calendar.dayNames = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+		    $scope.uiConfig.calendar.dayNamesShort = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
 		    $scope.changeTo = 'Hungarian';
 		  }
 		};
