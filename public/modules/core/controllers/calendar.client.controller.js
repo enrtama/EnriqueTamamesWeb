@@ -12,7 +12,7 @@ angular.module('core').controller('CalendarController', ['$scope', '$compile', '
 		$scope.changeTo = 'Hungarian';
 		/* event source that pulls from google.com */
 		$scope.eventSource = {
-		        url: "http://www.google.com/calendar/feeds/usa__en%40holiday.calendar.google.com/public/basic",
+		        url: 'http://www.google.com/calendar/feeds/usa__en%40holiday.calendar.google.com/public/basic',
 		        className: 'gcal-event',           // an option!
 		        currentTimezone: 'America/Chicago' // an option!
 		};
