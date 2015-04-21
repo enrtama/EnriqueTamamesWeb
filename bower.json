@@ -21,6 +21,7 @@
     "angular-translate": "~2.6.1",
     "angular-toasty": "~0.1.8",
     "angular-ui-calendar": "latest",
-    "ng-sortable": "~1.2.0"
+    "ng-sortable": "~1.2.0",
+    "ng-flags": "~0.0.1"
   }
 }

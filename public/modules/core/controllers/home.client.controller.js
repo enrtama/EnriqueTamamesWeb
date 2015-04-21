@@ -20,8 +20,18 @@ angular.module('core')
 		}; 
 
 		// Translation settings
-		$scope.changeLanguage = function (key) {
+		$scope.changeLanguage = function (e, key) {
 			$translate.use(key);
+			var current = angular.element(e.currentTarget);
+			var languageOptions = angular.element($('.flag'));
+			angular.forEach(languageOptions, function(option) {
+				var element = angular.element(option);
+				if (element.hasClass('selected')) {
+					element.removeClass('selected');
+					element.addClass('unselected');
+				}
+			});
+			current.addClass('selected');
 		};
 
 		$translate(['TITLE', 'TEXT', 'BUTTON_LANG_EN', 'BUTTON_LANG_ES']).then(function (translations) {

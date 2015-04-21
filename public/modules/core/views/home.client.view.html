@@ -7,8 +7,8 @@
 		<p translate>TEXT</p>
 	</div>
 	<div class="language-option inline">
-		<button translate class="btn ng-scope" ng-click="changeLanguage('en')" translate="BUTTON_LANG_EN">BUTTON_LANG_EN</button>
-		<button class="btn ng-scope" ng-click="changeLanguage('es')" translate="BUTTON_LANG_ES">BUTTON_LANG_ES</button>
+		<span class="flag selected" translate flag="'us'" flag-size="f32" ng-click="changeLanguage($event,'en')" translate="BUTTON_LANG_EN"></span>
+		<span class="flag unselected" translate flag="'es'" flag-size="f32" ng-click="changeLanguage($event,'es')" translate="BUTTON_LANG_ES"></span>
 	</div>
 
 	<nav>

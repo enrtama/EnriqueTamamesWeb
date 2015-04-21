@@ -34,7 +34,8 @@ module.exports = {
 				'public/lib/angular-ui-calendar/src/calendar.js',
 				'public/lib/fullcalendar/fullcalendar.js',
 				'public/lib/fullcalendar/gcal.js',
-				'public/lib/ng-sortable/dist/ng-sortable.js'
+				'public/lib/ng-sortable/dist/ng-sortable.js',
+				'public/lib/ng-flags/src/directives/ng-flags.js'
 			]
 		},
 		css: [

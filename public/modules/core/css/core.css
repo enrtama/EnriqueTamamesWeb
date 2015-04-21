@@ -23,7 +23,6 @@ body {
 }
 
 .right-action{
-	font-weight: bold;
 	text-align: right;
 	font-size: 18px;
 }
@@ -31,7 +30,11 @@ body {
 .language-option{
 	position: fixed;
 	right: 8px;
-	top: 60px;
+	top: 55px;
+}
+
+.flag{
+	cursor: pointer;
 }
 
 .content {
@@ -222,12 +225,28 @@ h3{
 }
 
 /* align icon */
-.left-addon .glyphicon  { left:  0px;}
-.right-addon .glyphicon { right: 0px;}
+.left-addon .glyphicon {
+	left:  0px;
+}
+.right-addon .glyphicon {
+	right: 0px;
+}
 
 /* add padding  */
 .left-addon input, 
-.left-addon textarea  { padding-left:  30px; }
+.left-addon textarea {
+	padding-left:  30px;
+}
 
 .right-addon input,
-.right-addon textarea { padding-right: 30px; }
+.right-addon textarea {
+	padding-right: 30px;
+}
+
+.unselected{
+	opacity: 0.5;
+}
+
+.selected{
+	opacity: 1.0;
+}
