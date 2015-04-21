@@ -9,7 +9,6 @@ angular.module('core')
 		// This provides Authentication context.
 		$scope.authentication = Authentication;
 		$scope.items = ['item1', 'item2', 'item3'];
-		$scope.container = angular.element(document.querySelector('#rightColumn'));
 		$scope.sections = angular.element($('.section').css('height', window.screen.availHeight));
 		$scope.myInterval = 2000;
 		$scope.alerts = [
@@ -31,36 +30,6 @@ angular.module('core')
 			$scope.buttonEnglish = translations.BUTTON_LANG_EN;
 			$scope.buttonSpanish = translations.BUTTON_LANG_ES;
 		});
-
-		$scope.toTheTop = function() {
-			$scope.container.scrollTop(0, 500);
-		};
-
-		// Add Carousel
-		var slides = $scope.slides = [];
-		$scope.addSlide = function() {
-			var newWidth = 600 + slides.length + 1;
-			slides.push({
-				image: 'http://placekitten.com/' + newWidth + '/300',
-				text: ['More','Extra','Lots of','Surplus'][slides.length % 4] + ' ' + ['Cats', 'Kittys', 'Felines', 'Cutes'][slides.length % 4]
-			});
-		};
-		for (var i = 0; i < 4; i++) {
-			$scope.addSlide();
-		}
-
-		// Example actions
-		$scope.showMessage = function() {
-			alert('Clicked!');
-  		};
-
-  		// Alerts
-		$scope.addAlert = function() {
-			$scope.alerts.push({msg: 'Another alert!'});
-		};
-		$scope.closeAlert = function(index) {
-			$scope.alerts.splice(index, 1);
-		};
 
 		// Modal
 		$scope.open = function (size) {

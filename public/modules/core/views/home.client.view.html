@@ -1,89 +1,130 @@
 <section class="home" data-ng-controller="HomeController">
 	<toasty-container toasty-defaults='{"close-button":true}'></toasty-container>
+	
+	<!-- Languages settings -->
+	<div class="well">
+		<p translate>TITLE</p>
+		<p translate>TEXT</p>
+	</div>
+	<div class="language-option inline">
+		<button translate class="btn ng-scope" ng-click="changeLanguage('en')" translate="BUTTON_LANG_EN">BUTTON_LANG_EN</button>
+		<button class="btn ng-scope" ng-click="changeLanguage('es')" translate="BUTTON_LANG_ES">BUTTON_LANG_ES</button>
+	</div>
+
 	<nav>
-		<ul id="rightPanel">
-			<li><a href="#section-1" du-smooth-scroll du-scrollspy>Section 1</a></li>
-			<li><a href="#section-2" du-smooth-scroll du-scrollspy>Section 2</a></li>
-			<li><a href="#section-3" du-smooth-scroll du-scrollspy>Section 3</a></li>
+		<ul id="right-panel">
+			<li><a href="#section-1" class="right-action" du-smooth-scroll du-scrollspy>About</a></li>
+			<li><a href="#section-2" class="right-action"  du-smooth-scroll du-scrollspy>Projects</a></li>
+			<li><a href="#section-3" class="right-action"  du-smooth-scroll du-scrollspy>Contact</a></li>
 		</ul>
 	</nav>
 
-	<div class="jumbotron text-center">
-		<div class="row">
-			<div class="col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3 col-xs-12">
-				<img alt="MEAN.JS" class="img-responsive text-center" src="modules/core/img/brand/logo.png" />
-			</div>
-		</div>
-		<br>
-		<div class="row">
-			<p class="lead">
-				Personal website of Enrique Tamames, Web Developer
-			</p>
-		</div>
-	</div>
-    
-	<div class="examples">
-		<h1>Examples</h1>
-		<!-- Click event -->
-		<button class="btn btn-success" ng-click="showMessage()">Click me!</button>
-		<!-- Alerts -->
-		<alert ng-repeat="alert in alerts" type="{{alert.type}}" close="closeAlert($index)">{{alert.msg}}</alert>
-		<button class='btn btn-default' ng-click="addAlert()">Add Alert</button>
-		<!-- Modal window -->
-		<button class="btn btn-default" ng-click="open()">Open me!</button>
-		<!-- Edit in place example -->
-		<div><a href="#" editable-text="user.name">{{ user.name || "empty" }}</a></div>
-		<!-- Translation buttons -->
-		<div class="well">
-			<p translate>TITLE</p>
-			<p translate>TEXT</p>
-		</div>
-		<button translate class="btn ng-scope" ng-click="changeLanguage('en')" translate="BUTTON_LANG_EN">BUTTON_LANG_EN</button>
-		<button class="btn ng-scope" ng-click="changeLanguage('es')" translate="BUTTON_LANG_ES">BUTTON_LANG_ES</button>
-		<!-- Toast -->
-		</div>
-			<button class="btn btn-primary" ng-click="openToast()">Open toast!</button>
-		</div>
-		<!-- Sotable example -->
-		<br>
-		<div id="sortable-container">
-			<div class="sortable-row" as-sortable="sortableOptions" ng-model="itemsList.items1">
-				<div ng-repeat="item in itemsList.items1" as-sortable-item>
-					<div as-sortable-item-handle>{{item.Label}}</div>
-				</div>
-			</div>
-			<div class="sortable-row" as-sortable="sortableOptions" ng-model="itemsList.items2">
-				<div ng-repeat="item in itemsList.items2" as-sortable-item>
-					<div as-sortable-item-handle>{{item.Label}}</div>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<div id="rightColumn" du-scroll-container>
+	<div du-scroll-container>
 		<section id="section-1" class="section">
-			<h2>Section 1</h2>
-			<div>
-				<carousel class="carousel" interval="myInterval">
-				<slide ng-repeat="slide in slides" active="slide.active">
-					<img ng-src="{{slide.image}}" style="margin:auto;">
-					<div class="carousel-caption">
-						<h4>Slide {{$index}}</h4>
-						<p>{{slide.text}}</p>
+			<br><h2>About</h2>
+			<div class="jumbotron info text-center">
+				<div class="row text-center">
+					<div class="col-md-3 col-md-offset-2">
+						<img alt="enrtama" class="img-responsive text-left" src="modules/core/img/assets/enrtama.png" />
 					</div>
-				</slide>
-				</carousel>
+					<div class="lead pull-right">
+						<h2>Enrique Tamames</h2>
+						<p>I'm spanish and I'm 25 years old</p>
+						<p>Currently living in Amsterdam and working as both Frontend & Backend developer</p>
+					</div>
+				</div>
 			</div>
+			<div>
+			<tabset justified="true">
+				<tab heading="Frontend">
+					<p><img alt="mean" class="img-responsive text-left" src="modules/core/img/brand/logo.png" /></p>
+				</tab>
+				<tab heading="Backend">
+					
+				</tab>
+				<tab heading="Database">
+
+				</tab>
+			</tabset>
+			<div>
 		</section>
 
 		<section id="section-2" class="section">
-			<h2>Section 2</h2>
-			<p></p>
+			<br><h2>Projects</h2>
+			<div>
+			<a href>
+				<div class="boxgrid captionfull">
+					<img class="cover" src=""/>
+					<h3>Layergloss App Creator</h3>
+					<p>App production platform based on the concept of Drag, Drop and Publish. With this tool it's very easy to create apps for the Apple iOs platform in minutes, instead of days and at a fraction of the cost that others charge. We combine easy to use with fast to create.</p>
+				</div>
+			</a>
+			<a href>
+				<div class="boxgrid captionfull">
+					<img class="cover" src=""/>
+					<h3>Maria Tamames</h3>
+					<p>Personal website of Maria Tamames, fashion designer.</p>
+				</div>
+			</a>
+			<a href>
+				<div class="boxgrid captionfull">
+					<img class="cover" src=""/>
+					<h3>XGen</h3>
+					<p></p>
+				</div>
+			</a>
+			<a href>
+				<div class="boxgrid captionfull">
+					<img class="cover" src=""/>
+					<h3>DKT Website</h3>
+					<p></p>
+				</div>
+			</a>
+			<a href>
+				<div class="boxgrid captionfull">
+					<img class="cover" src=""/>
+					<h3>Pinapardo</h3>
+					<p>PINAPARDO is a Slow Fashion&Textile Crafts, collage and visuals project. PINAPARDO was born in the bosom of a core fulfilled with worries and questions. It arises before the imminent need to find the answers. A way of personal expression, which oppresses the senses and keeps them alert from a boisterous environment.</p>
+				</div>
+			</a>
+			<a href>
+				<div class="boxgrid captionfull">
+					<img class="cover" src=""/>
+					<h3>Physiotherapy Elvira Muniz</h3>
+					<p>Physiotherapy by using manual techniques and phisical instruments in order to improve your quality of live.</p>
+				</div>
+			</a>			
+			</div>
 		</section>
 
 		<section id="section-3" class="section">
-			<h2>Section 3</h2>
-			<p></p>
+			<br><h2>Contact</h2>
+			<div class="jumbotron form-info">
+				<form>
+					<div class="inner-addon left-addon">
+						<i class="glyphicon glyphicon-user"></i>
+						<input type="text" class="form-control" placeholder="Username"/>
+					</div>
+					<div class="inner-addon left-addon">
+						<i class="glyphicon glyphicon-envelope"></i>
+						<input type="email" class="form-control" placeholder="Email"/>
+					</div>
+					<div class="inner-addon left-addon">
+						<i class="glyphicon glyphicon-text-size"></i>
+						 <textarea class="form-control" rows="5" placeholder="Message"></textarea>
+					</div>
+					<div class="form-actions">
+						<div class="inner-addon inline left-addon">
+							<i class="glyphicon glyphicon-send"></i>
+							<input class="btn btn-warning" type="submit" ng-click="update(user)" value="Send"/>
+						</div>
+						<div class="inner-addon inline left-addon">
+							<i class="glyphicon glyphicon-trash"></i>
+							<input class="btn btn-info" type="button" ng-click="reset()" value="Reset" />
+						</div>
+					</div>
+				</form>
+			</div>
 		</section>
 	</div>
 
