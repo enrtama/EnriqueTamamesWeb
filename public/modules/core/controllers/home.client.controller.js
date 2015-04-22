@@ -96,6 +96,18 @@ angular.module('core')
 ]);
 
 angular.module('core')
+	.controller('SubmitController', ['$scope', '$http', 'Authentication', '$translate',
+		function($scope, $http, Authentication, translate) {
+
+			$scope.submit = function(form) {
+				// HTTP post
+				// $http.post('process.php', $scope.formData) 
+				// .success(function(data) { ... });
+			};
+	}
+]);
+
+angular.module('core')
 	.run(function(editableOptions) {
 		editableOptions.theme = 'bs3'; // bootstrap3 theme. Can be also 'bs2', 'default'
 	}

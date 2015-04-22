@@ -100,27 +100,24 @@
 		<section id="section-3" class="section">
 			<br><h2>Contact</h2>
 			<div class="jumbotron form-info">
-				<form>
+				<form name="form" ng-submit="submit(form)" ng-controller="SubmitController">
 					<div class="inner-addon left-addon">
 						<i class="glyphicon glyphicon-user"></i>
-						<input type="text" class="form-control" placeholder="Username"/>
+						<input name="username" type="text" class="form-control" placeholder="Username" required/>
+						<span class="help-block" ng-show="errorUsername">{{ errorUsername }}</span> 
 					</div>
 					<div class="inner-addon left-addon">
 						<i class="glyphicon glyphicon-envelope"></i>
-						<input type="email" class="form-control" placeholder="Email"/>
+						<input name="email" type="email" class="form-control" placeholder="Email" required/>
 					</div>
 					<div class="inner-addon left-addon">
 						<i class="glyphicon glyphicon-text-size"></i>
-						 <textarea class="form-control" rows="5" placeholder="Message"></textarea>
+						 <textarea name="message" class="form-control textarea" rows="5" placeholder="Message" required></textarea>
 					</div>
 					<div class="form-actions">
 						<div class="inner-addon inline left-addon">
 							<i class="glyphicon glyphicon-send"></i>
-							<input class="btn btn-warning" type="submit" ng-click="update(user)" value="Send"/>
-						</div>
-						<div class="inner-addon inline left-addon">
-							<i class="glyphicon glyphicon-trash"></i>
-							<input class="btn btn-info" type="button" ng-click="reset()" value="Reset" />
+							<button class="btn btn-success" type="submit">Send</button>
 						</div>
 					</div>
 				</form>

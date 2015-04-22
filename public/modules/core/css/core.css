@@ -203,6 +203,11 @@ h3{
 
 .form-control{
 	margin: 15px 0 15px 0;
+	width: 300px;
+}
+
+.textarea{
+	width: 500px;
 }
 
 .form-actions{
@@ -233,12 +238,14 @@ h3{
 }
 
 /* add padding  */
-.left-addon input, 
+.left-addon input,
+.left-addon button,
 .left-addon textarea {
 	padding-left:  30px;
 }
 
 .right-addon input,
+.right-addon button,
 .right-addon textarea {
 	padding-right: 30px;
 }
