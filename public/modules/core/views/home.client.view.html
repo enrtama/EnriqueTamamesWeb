@@ -103,16 +103,15 @@
 				<form name="form" ng-submit="submit(form)" ng-controller="SubmitController">
 					<div class="inner-addon left-addon">
 						<i class="glyphicon glyphicon-user"></i>
-						<input name="username" type="text" class="form-control" placeholder="Username" required/>
-						<span class="help-block" ng-show="errorUsername">{{ errorUsername }}</span> 
+						<input name="username" type="text" class="form-control" placeholder="Username" data-ng-model="contact.username"/>
 					</div>
 					<div class="inner-addon left-addon">
 						<i class="glyphicon glyphicon-envelope"></i>
-						<input name="email" type="email" class="form-control" placeholder="Email" required/>
+						<input name="email" type="email" class="form-control" placeholder="Email" data-ng-model="contact.email"/>
 					</div>
 					<div class="inner-addon left-addon">
 						<i class="glyphicon glyphicon-text-size"></i>
-						 <textarea name="message" class="form-control textarea" rows="5" placeholder="Message" required></textarea>
+						 <textarea name="message" class="form-control textarea" rows="5" placeholder="Message" data-ng-model="contact.message"></textarea>
 					</div>
 					<div class="form-actions">
 						<div class="inner-addon inline left-addon">

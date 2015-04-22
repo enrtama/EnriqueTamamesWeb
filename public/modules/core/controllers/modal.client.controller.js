@@ -1,16 +1,15 @@
 'use strict';
 
 angular.module('core')
-	.controller('ModalInstanceController', ['$scope', '$modalInstance', 'items', 
-	function($scope, $modalInstance, items) {
+	.controller('ModalInstanceController', ['$scope', '$modalInstance', 'content', 
+	function($scope, $modalInstance, content) {
 
-		$scope.items = items;
-		$scope.selected = {
-			item: $scope.items[0]
-		};
+		$scope.header = content.header;
+		$scope.body = content.body;
+		$scope.object = content.object;
 
 		$scope.ok = function () {
-			$modalInstance.close($scope.selected.item);
+			$modalInstance.close();
 		};
 
 		$scope.cancel = function () {

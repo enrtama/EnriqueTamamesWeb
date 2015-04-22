@@ -5,20 +5,19 @@
  */
 var should = require('should'),
 	mongoose = require('mongoose'),
-	User = mongoose.model('User'),
 	Contact = mongoose.model('Contact');
 
 /**
  * Globals
  */
-var user, contact;
+var contact;
 
 /**
  * Unit tests
  */
 describe('Contact Model Unit Tests:', function() {
 	beforeEach(function(done) {
-		user = new User({
+		contact = new Contact({
 			firstName: 'Full',
 			lastName: 'Name',
 			displayName: 'Full Name',
@@ -27,14 +26,7 @@ describe('Contact Model Unit Tests:', function() {
 			password: 'password'
 		});
 
-		user.save(function() { 
-			contact = new Contact({
-				name: 'Contact Name',
-				user: user
-			});
-
-			done();
-		});
+		done();
 	});
 
 	describe('Method Save', function() {
@@ -57,7 +49,6 @@ describe('Contact Model Unit Tests:', function() {
 
 	afterEach(function(done) { 
 		Contact.remove().exec();
-		User.remove().exec();
 
 		done();
 	});

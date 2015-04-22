@@ -11,8 +11,8 @@ module.exports = function(app) {
 
 	app.route('/contacts/:contactId')
 		.get(contacts.read)
-		.put(users.requiresLogin, contacts.hasAuthorization, contacts.update)
-		.delete(users.requiresLogin, contacts.hasAuthorization, contacts.delete);
+		.put(users.requiresLogin, contacts.update)
+		.delete(users.requiresLogin, contacts.delete);
 
 	// Finish by binding the Contact middleware
 	app.param('contactId', contacts.contactByID);

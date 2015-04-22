@@ -13,7 +13,6 @@ var mongoose = require('mongoose'),
  */
 exports.create = function(req, res) {
 	var contact = new Contact(req.body);
-	contact.user = req.user;
 
 	contact.save(function(err) {
 		if (err) {

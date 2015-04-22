@@ -1,8 +1,8 @@
 'use strict';
 
 // Contacts controller
-angular.module('contacts').controller('ContactsController', ['$scope', '$stateParams', '$location', 'Authentication', 'Contacts',
-	function($scope, $stateParams, $location, Authentication, Contacts) {
+angular.module('contacts').controller('ContactsController', ['$scope', '$stateParams', '$location', 'Authentication', '$modal', 'Contacts', '$log',
+	function($scope, $stateParams, $location, Authentication, $modal, Contacts, $log) {
 		$scope.authentication = Authentication;
 
 		// Create new Contact
@@ -26,13 +26,31 @@ angular.module('contacts').controller('ContactsController', ['$scope', '$statePa
 		// Remove existing Contact
 		$scope.remove = function(contact) {
 			if ( contact ) { 
-				contact.$remove();
-
-				for (var i in $scope.contacts) {
-					if ($scope.contacts [i] === contact) {
-						$scope.contacts.splice(i, 1);
+				
+				var modalInstance = $modal.open({
+					templateUrl: 'modules/core/views/modal.client.view.html',
+					controller: 'ModalInstanceController',
+					resolve: {
+						content: function () {
+							return {
+								header: 'Delete contact',
+								body: 'Are you sure you want to delete?',
+								object: contact
+							};
+						}
 					}
-				}
+				});
+
+				modalInstance.result.then(function () {
+					contact.$remove();
+					for (var i in $scope.contacts) {
+						if ($scope.contacts [i] === contact) {
+							$scope.contacts.splice(i, 1);
+						}
+					}
+				}, function () {
+					// $log.info('Modal dismissed at: ' + new Date());
+				});
 			} else {
 				$scope.contact.$remove(function() {
 					$location.path('contacts');

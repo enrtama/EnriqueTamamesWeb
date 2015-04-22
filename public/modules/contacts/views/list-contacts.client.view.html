@@ -3,17 +3,23 @@
         <h1>Contacts</h1>
     </div>
     <div class="list-group">
-        <a data-ng-repeat="contact in contacts" data-ng-href="#!/contacts/{{contact._id}}" class="list-group-item">
-			<small class="list-group-item-text">
-				Posted on
-				<span data-ng-bind="contact.created | date:'medium'"></span>
-				by
-				<span data-ng-bind="contact.user.displayName"></span>
-			</small>
-			<h4 class="list-group-item-heading" data-ng-bind="contact.name"></h4>
-        </a>
+        <div data-ng-repeat="contact in contacts" class="list-group-item">
+            <div class="menu-actions">
+                <a class="btn btn-primary" href="/#!/contacts/{{contact._id}}/edit">
+                    <i class="glyphicon glyphicon-edit"></i>
+                </a>
+                <a class="btn btn-danger" data-ng-click="remove(contact);">
+                    <i class="glyphicon glyphicon-trash"></i>
+                </a>
+            </div>
+            <small class="list-group-item-text">Posted on
+                <span data-ng-bind="contact.created | date:'medium'"></span>
+            </small>
+            <p class="list-group-item-heading" data-ng-bind="contact.username"></p>
+            <p class="list-group-item-heading" data-ng-bind="contact.email"></p>
+        </div>
     </div>
     <div class="alert alert-warning text-center" data-ng-hide="!contacts.$resolved || contacts.length">
-    	No Contacts yet, why don't you <a href="/#!/contacts/create">create one</a>?
+        No Contacts yet!
     </div>
 </section>

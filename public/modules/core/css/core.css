@@ -89,6 +89,7 @@ a.active {
 }
 
 .link{
+	padding-left: 30px;
 	font-size: 14px;
 }
 
@@ -256,4 +257,15 @@ h3{
 
 .selected{
 	opacity: 1.0;
+}
+
+/* Modal */
+
+.modal-body-content{
+	padding: 30px 20px 30px 20px;
+	font-size: 18px;
+}
+
+.modal-title{
+	color: #000;
 }
