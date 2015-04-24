@@ -16,3 +16,9 @@
 input[type=text], input[type=password]{
 	width: 300px;	
 }
+
+.center{
+	position: relative;
+	width: 900px;
+	margin: 0 auto;
+}
