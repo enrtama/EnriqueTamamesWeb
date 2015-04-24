@@ -3,8 +3,8 @@
 angular.module('core')
 	.value('duScrollDuration', 500)
 	.value('duScrollOffset', 30)
-	.controller('HomeController', ['$scope', 'Authentication', '$log', '$translate', 'toasty',
-		function($scope, Authentication, $log, $translate, toasty) {
+	.controller('HomeController', ['$scope', 'Authentication', '$log', '$translate',
+		function($scope, Authentication, $log, $translate) {
 
 		// This provides Authentication context.
 		$scope.authentication = Authentication;
@@ -75,8 +75,8 @@ angular.module('core')
 ]);
 
 angular.module('core')
-	.controller('SubmitController', ['$scope', '$http', '$location', 'Authentication', '$translate', 'Contacts',
-		function($scope, $http, $location, Authentication, translate, Contacts) {
+	.controller('SubmitController', ['$scope', '$http', '$location', 'Authentication', '$translate', 'Contacts', 'toasty',
+		function($scope, $http, $location, Authentication, translate, Contacts, toasty) {
 
 			$scope.submit = function(form) {
 				// HTTP post
@@ -86,7 +86,13 @@ angular.module('core')
 					message: $scope.contact.message
 				});
 				contact.$save(function(response) {
-					$location.path('contacts');
+
+					toasty.pop.success({
+						title: 'Your message has been sent successfully!',
+						sound: true,
+						showClose: true,
+						clickToClose: false
+					});
 
 					$scope.username = '';
 					$scope.email = '';
