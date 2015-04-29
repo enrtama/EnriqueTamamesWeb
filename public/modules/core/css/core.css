@@ -13,12 +13,13 @@ body {
 
 .footer {
 	position: fixed;
+	vertical-align: middle;
 	bottom: 0;
 	width: 100%;
 	/* Set the fixed height of the footer here */
 	height: 50px;
 	background-color: #EEE;
-	padding: 10px 130px 10px 130px;
+	padding: 15px 130px 10px 130px;
 	font-size: 13px;
 }
 
@@ -93,6 +94,7 @@ a.active {
 }
 
 .link{
+	padding-left: 30px;
 	font-size: 14px;
 }
 
@@ -122,30 +124,15 @@ a.active {
 	width:300px;
 	margin: 20px 150px 0 0;
 }
-
-.box {
-	width: 300px;
-	height: 200px;
-	box-shadow: inset 1px 1px 40px 0 rgba(0,0,0,.45);
-	border-bottom: 2px solid #fff;
-	border-right: 2px solid #fff;
-	margin: 5% auto 0 auto;
-	background: url(http://ianfarb.com/wp-content/uploads/2013/10/nicholas-hodag.jpg);
-	background-size: cover;
-	border-radius: 5px;
-	overflow: hidden;
- }
  
 .overlay {
 	background: rgba(0,0,0,.75);
 	text-align: center;
 	padding: 45px 0 66px 0;
-	opacity: 0;
+	opacity: 0.5;
 	-webkit-transition: opacity .25s ease;
 	-moz-transition: opacity .25s ease;
  }
- 
-.box:hover .overlay {opacity: 1;}
  
 .plus p.title{
 	position: absolute;
@@ -169,9 +156,9 @@ a.active {
 .boxgrid{
 	width: 280px; 
 	height: 180px; 
-	margin:10px; 
-	float:left; 
-	background:#161613;
+	margin: 10px; 
+	float: left; 
+	background: #161613;
 	overflow: hidden; 
 	position: relative; 
 }
@@ -184,7 +171,7 @@ a.active {
 }
 
 .boxgrid img:hover{ 
-	opacity: 0;
+	opacity: 0.2;
 }
 
 .boxgrid p{

@@ -37,13 +37,25 @@
 			<div>
 			<tabset justified="true">
 				<tab heading="Frontend">
-					<p><img alt="mean" class="img-responsive text-left" src="modules/core/img/brand/logo.png" /></p>
+					<p class="col-md-2 col-md-offset-1">
+						<img alt="mean" class="img-responsive text-left info" src="modules/core/img/assets/mean.png"/>
+						<img alt="angular" class="img-responsive text-left info" src="modules/core/img/assets/angular.png"/>
+						<img alt="backbone" class="img-responsive text-left info" src="modules/core/img/assets/backbone.png"/>
+						<img alt="jquery" class="img-responsive text-left info" src="modules/core/img/assets/jquery.png"/>
+					</p>
 				</tab>
 				<tab heading="Backend">
-					
+					<p class="col-md-2 col-md-offset-5">
+						<img alt="php" class="img-responsive text-left info" src="modules/core/img/assets/php.png"/>
+						<img alt="CakePHP" class="img-responsive text-left info" src="modules/core/img/assets/cakephp.png"/>
+						<img alt="ASP.NET" class="img-responsive text-left info" src="modules/core/img/assets/asp-net.png"/>
+					</p>
 				</tab>
 				<tab heading="Database">
-
+					<p class="col-md-2 col-md-offset-9">
+						<img alt="MySQL" class="img-responsive text-left info" src="modules/core/img/assets/mysql.png"/>
+						<img alt="MongoDB" class="img-responsive text-left info" src="modules/core/img/assets/mongodb.png"/>
+					</p>
 				</tab>
 			</tabset>
 			<div>
@@ -54,42 +66,42 @@
 			<div>
 			<a href>
 				<div class="boxgrid captionfull">
-					<img class="cover" src=""/>
+					<img class="cover" src="modules/core/img/assets/layergloss.png"/>
 					<h3>Layergloss App Creator</h3>
 					<p>App production platform based on the concept of Drag, Drop and Publish. With this tool it's very easy to create apps for the Apple iOs platform in minutes, instead of days and at a fraction of the cost that others charge. We combine easy to use with fast to create.</p>
 				</div>
 			</a>
 			<a href>
 				<div class="boxgrid captionfull">
-					<img class="cover" src=""/>
+					<img class="cover" src="modules/core/img/assets/mariatamames.jpg"/>
 					<h3>Maria Tamames</h3>
 					<p>Personal website of Maria Tamames, fashion designer.</p>
 				</div>
 			</a>
 			<a href>
 				<div class="boxgrid captionfull">
-					<img class="cover" src=""/>
+					<img class="cover" src="modules/core/img/assets/xgen.png"/>
 					<h3>XGen</h3>
 					<p></p>
 				</div>
 			</a>
 			<a href>
 				<div class="boxgrid captionfull">
-					<img class="cover" src=""/>
+					<img class="cover" src="modules/core/img/assets/dkt.png"/>
 					<h3>DKT Website</h3>
 					<p></p>
 				</div>
 			</a>
 			<a href>
 				<div class="boxgrid captionfull">
-					<img class="cover" src=""/>
+					<img class="cover" src="modules/core/img/assets/pinapardo.jpg"/>
 					<h3>Pinapardo</h3>
-					<p>PINAPARDO is a Slow Fashion&Textile Crafts, collage and visuals project. PINAPARDO was born in the bosom of a core fulfilled with worries and questions. It arises before the imminent need to find the answers. A way of personal expression, which oppresses the senses and keeps them alert from a boisterous environment.</p>
+					<p>PINAPARDO is a Slow Fashion&Textile Crafts, collage and visuals project. PINAPARDO was born in the bosom of a core fulfilled with worries and questions. It arises before the imminent need to find the answers. A way of personal expression.</p>
 				</div>
 			</a>
 			<a href>
 				<div class="boxgrid captionfull">
-					<img class="cover" src=""/>
+					<img class="cover" src="modules/core/img/assets/physiotherapy.jpg"/>
 					<h3>Physiotherapy Elvira Muniz</h3>
 					<p>Physiotherapy by using manual techniques and phisical instruments in order to improve your quality of live.</p>
 				</div>
@@ -103,16 +115,15 @@
 				<form name="form" ng-submit="submit(form)" ng-controller="SubmitController">
 					<div class="inner-addon left-addon">
 						<i class="glyphicon glyphicon-user"></i>
-						<input name="username" type="text" class="form-control" placeholder="Username" required/>
-						<span class="help-block" ng-show="errorUsername">{{ errorUsername }}</span> 
+						<input name="username" type="text" class="form-control" placeholder="Username" data-ng-model="contact.username"/>
 					</div>
 					<div class="inner-addon left-addon">
 						<i class="glyphicon glyphicon-envelope"></i>
-						<input name="email" type="email" class="form-control" placeholder="Email" required/>
+						<input name="email" type="email" class="form-control" placeholder="Email" data-ng-model="contact.email"/>
 					</div>
 					<div class="inner-addon left-addon">
 						<i class="glyphicon glyphicon-text-size"></i>
-						 <textarea name="message" class="form-control textarea" rows="5" placeholder="Message" required></textarea>
+						 <textarea name="message" class="form-control textarea" rows="5" placeholder="Message" data-ng-model="contact.message"></textarea>
 					</div>
 					<div class="form-actions">
 						<div class="inner-addon inline left-addon">

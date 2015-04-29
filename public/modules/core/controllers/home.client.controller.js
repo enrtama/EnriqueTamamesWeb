@@ -3,12 +3,11 @@
 angular.module('core')
 	.value('duScrollDuration', 500)
 	.value('duScrollOffset', 30)
-	.controller('HomeController', ['$scope', 'Authentication', '$modal', '$log', '$translate', 'toasty',
-		function($scope, Authentication, $modal, $log, $translate, toasty) {
+	.controller('HomeController', ['$scope', 'Authentication', '$log', '$translate',
+		function($scope, Authentication, $log, $translate) {
 
 		// This provides Authentication context.
 		$scope.authentication = Authentication;
-		$scope.items = ['item1', 'item2', 'item3'];
 		$scope.sections = angular.element($('.section').css('height', window.screen.availHeight));
 		$scope.myInterval = 2000;
 		$scope.alerts = [
@@ -40,26 +39,6 @@ angular.module('core')
 			$scope.buttonEnglish = translations.BUTTON_LANG_EN;
 			$scope.buttonSpanish = translations.BUTTON_LANG_ES;
 		});
-
-		// Modal
-		$scope.open = function (size) {
-			var modalInstance = $modal.open({
-				templateUrl: 'modules/core/views/modal.client.view.html',
-				controller: 'ModalInstanceController',
-				size: size,
-				resolve: {
-					items: function () {
-						return $scope.items;
-					}
-				}
-			});
-
-			modalInstance.result.then(function (selectedItem) {
-				$scope.selected = selectedItem;
-			}, function () {
-				$log.info('Modal dismissed at: ' + new Date());
-			});
-		};
 
 		// Toast example
 		$scope.openToast = function() {
@@ -96,13 +75,31 @@ angular.module('core')
 ]);
 
 angular.module('core')
-	.controller('SubmitController', ['$scope', '$http', 'Authentication', '$translate',
-		function($scope, $http, Authentication, translate) {
+	.controller('SubmitController', ['$scope', '$http', '$location', 'Authentication', '$translate', 'Contacts', 'toasty',
+		function($scope, $http, $location, Authentication, translate, Contacts, toasty) {
 
 			$scope.submit = function(form) {
 				// HTTP post
-				// $http.post('process.php', $scope.formData) 
-				// .success(function(data) { ... });
+				var contact = new Contacts({
+					username: $scope.contact.username,
+					email: $scope.contact.email,
+					message: $scope.contact.message
+				});
+				contact.$save(function(response) {
+
+					toasty.pop.success({
+						title: 'Your message has been sent successfully!',
+						sound: true,
+						showClose: true,
+						clickToClose: false
+					});
+
+					$scope.username = '';
+					$scope.email = '';
+					$scope.message = '';
+				}, function(errorResponse) {
+					$scope.error = errorResponse.data.message;
+				});
 			};
 	}
 ]);

@@ -1,0 +1,6 @@
+.menu-actions{
+	position: relative;
+	top: 18px;
+	float: right;
+	z-index: 999;
+}
