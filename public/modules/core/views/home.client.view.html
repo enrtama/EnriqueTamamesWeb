@@ -1,42 +1,37 @@
 <section class="home" data-ng-controller="HomeController">
 	<toasty-container toasty-defaults='{"close-button":true}'></toasty-container>
 	
-	<!-- Languages settings -->
-	<div class="well">
-		<p translate>TITLE</p>
-		<p translate>TEXT</p>
-	</div>
 	<div class="language-option inline">
-		<span class="flag selected" translate flag="'us'" flag-size="f32" ng-click="changeLanguage($event,'en')" translate="BUTTON_LANG_EN"></span>
-		<span class="flag unselected" translate flag="'es'" flag-size="f32" ng-click="changeLanguage($event,'es')" translate="BUTTON_LANG_ES"></span>
+		<span class="flag selected" translate flag="'us'" flag-size="f32" ng-click="changeLanguage($event,'en')" ></span>
+		<span class="flag unselected" translate flag="'es'" flag-size="f32" ng-click="changeLanguage($event,'es')"></span>
 	</div>
 
 	<nav>
 		<ul id="right-panel">
-			<li><a href="#section-1" class="right-action" du-smooth-scroll du-scrollspy>About</a></li>
-			<li><a href="#section-2" class="right-action"  du-smooth-scroll du-scrollspy>Projects</a></li>
-			<li><a href="#section-3" class="right-action"  du-smooth-scroll du-scrollspy>Contact</a></li>
+			<li><a href="#section-1" class="right-action" du-smooth-scroll du-scrollspy translate>MENU_ABOUT</a></li>
+			<li><a href="#section-2" class="right-action"  du-smooth-scroll du-scrollspy translate>MENU_PROJECTS</a></li>
+			<li><a href="#section-3" class="right-action"  du-smooth-scroll du-scrollspy translate>MENU_CONTACT</a></li>
 		</ul>
 	</nav>
 
 	<div du-scroll-container>
 		<section id="section-1" class="section">
-			<br><h2>About</h2>
+			<br><h2 translate>MENU_ABOUT</h2>
 			<div class="jumbotron info text-center">
 				<div class="row text-center">
 					<div class="col-md-3 col-md-offset-2">
 						<img alt="enrtama" class="img-responsive text-left" src="modules/core/img/assets/enrtama.png" />
 					</div>
 					<div class="lead pull-right">
-						<h2>Enrique Tamames</h2>
-						<p>I'm spanish and I'm 25 years old</p>
-						<p>Currently living in Amsterdam and working as both Frontend & Backend developer</p>
+						<h2 translate>Enrique Tamames</h2>
+						<p translate>SELF_DESCRIPTION1</p>
+						<p translate>SELF_DESCRIPTION2</p>
 					</div>
 				</div>
 			</div>
 			<div>
 			<tabset justified="true">
-				<tab heading="Frontend">
+				<tab heading="FRONTEND">
 					<p class="col-md-2 col-md-offset-1">
 						<img alt="mean" class="img-responsive text-left info" src="modules/core/img/assets/mean.png"/>
 						<img alt="angular" class="img-responsive text-left info" src="modules/core/img/assets/angular.png"/>
@@ -44,14 +39,14 @@
 						<img alt="jquery" class="img-responsive text-left info" src="modules/core/img/assets/jquery.png"/>
 					</p>
 				</tab>
-				<tab heading="Backend">
+				<tab heading="BACKEND">
 					<p class="col-md-2 col-md-offset-5">
 						<img alt="php" class="img-responsive text-left info" src="modules/core/img/assets/php.png"/>
 						<img alt="CakePHP" class="img-responsive text-left info" src="modules/core/img/assets/cakephp.png"/>
 						<img alt="ASP.NET" class="img-responsive text-left info" src="modules/core/img/assets/asp-net.png"/>
 					</p>
 				</tab>
-				<tab heading="Database">
+				<tab heading="DATABASE">
 					<p class="col-md-2 col-md-offset-9">
 						<img alt="MySQL" class="img-responsive text-left info" src="modules/core/img/assets/mysql.png"/>
 						<img alt="MongoDB" class="img-responsive text-left info" src="modules/core/img/assets/mongodb.png"/>
@@ -62,73 +57,73 @@
 		</section>
 
 		<section id="section-2" class="section">
-			<br><h2>Projects</h2>
+			<br><h2 translate>MENU_PROJECTS</h2>
 			<div>
 			<a href>
 				<div class="boxgrid captionfull">
 					<img class="cover" src="modules/core/img/assets/layergloss.png"/>
 					<h3>Layergloss App Creator</h3>
-					<p>App production platform based on the concept of Drag, Drop and Publish. With this tool it's very easy to create apps for the Apple iOs platform in minutes, instead of days and at a fraction of the cost that others charge. We combine easy to use with fast to create.</p>
+					<p translate>PROJECTS_LAYERGLOSS</p>
 				</div>
 			</a>
 			<a href>
 				<div class="boxgrid captionfull">
 					<img class="cover" src="modules/core/img/assets/mariatamames.jpg"/>
 					<h3>Maria Tamames</h3>
-					<p>Personal website of Maria Tamames, fashion designer.</p>
+					<p translate>PROJECTS_MARIATAMAMES</p>
 				</div>
 			</a>
 			<a href>
 				<div class="boxgrid captionfull">
 					<img class="cover" src="modules/core/img/assets/xgen.png"/>
 					<h3>XGen</h3>
-					<p></p>
+					<p translate>PROJECTS_XGEN</p>
 				</div>
 			</a>
 			<a href>
 				<div class="boxgrid captionfull">
 					<img class="cover" src="modules/core/img/assets/dkt.png"/>
 					<h3>DKT Website</h3>
-					<p></p>
+					<p translate>PROJECTS_DKT</p>
 				</div>
 			</a>
 			<a href>
 				<div class="boxgrid captionfull">
 					<img class="cover" src="modules/core/img/assets/pinapardo.jpg"/>
 					<h3>Pinapardo</h3>
-					<p>PINAPARDO is a Slow Fashion&Textile Crafts, collage and visuals project. PINAPARDO was born in the bosom of a core fulfilled with worries and questions. It arises before the imminent need to find the answers. A way of personal expression.</p>
+					<p translate>PROJECTS_PINAPARDO</p>
 				</div>
 			</a>
 			<a href>
 				<div class="boxgrid captionfull">
 					<img class="cover" src="modules/core/img/assets/physiotherapy.jpg"/>
-					<h3>Physiotherapy Elvira Muniz</h3>
-					<p>Physiotherapy by using manual techniques and phisical instruments in order to improve your quality of live.</p>
+					<h3>Elvira Muniz</h3>
+					<p translate>PROJECTS_ELVIRA</p>
 				</div>
 			</a>			
 			</div>
 		</section>
 
 		<section id="section-3" class="section">
-			<br><h2>Contact</h2>
+			<br><h2 translate>MENU_CONTACT</h2>
 			<div class="jumbotron form-info">
 				<form name="form" ng-submit="submit(form)" ng-controller="SubmitController">
 					<div class="inner-addon left-addon">
 						<i class="glyphicon glyphicon-user"></i>
-						<input name="username" type="text" class="form-control" placeholder="Username" data-ng-model="contact.username"/>
+						<input name="username" type="text" class="form-control" placeholder="{{ 'USERNAME' | translate }}" data-ng-model="contact.username"/>
 					</div>
 					<div class="inner-addon left-addon">
 						<i class="glyphicon glyphicon-envelope"></i>
-						<input name="email" type="email" class="form-control" placeholder="Email" data-ng-model="contact.email"/>
+						<input name="email" type="email" class="form-control" placeholder="{{ 'EMAIL' | translate }}" data-ng-model="contact.email"/>
 					</div>
 					<div class="inner-addon left-addon">
 						<i class="glyphicon glyphicon-text-size"></i>
-						 <textarea name="message" class="form-control textarea" rows="5" placeholder="Message" data-ng-model="contact.message"></textarea>
+						 <textarea name="message" class="form-control textarea" rows="5" placeholder="{{ 'MESSAGE' | translate }}" data-ng-model="contact.message"></textarea>
 					</div>
 					<div class="form-actions">
 						<div class="inner-addon inline left-addon">
 							<i class="glyphicon glyphicon-send"></i>
-							<button class="btn btn-success btn-large" type="submit">Send</button>
+							<button class="btn btn-success btn-large" type="submit" translate>SEND_BUTTON</button>
 						</div>
 					</div>
 				</form>

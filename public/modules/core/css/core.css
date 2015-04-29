@@ -266,3 +266,8 @@ img.info{
 button.btn-large{
 	width: 150px;
 }
+
+.copyright{
+	float:left;
+	margin-right: 5px;
+}

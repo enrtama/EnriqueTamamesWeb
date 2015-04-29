@@ -40,16 +40,6 @@ angular.module('core')
 			$scope.buttonSpanish = translations.BUTTON_LANG_ES;
 		});
 
-		// Toast example
-		$scope.openToast = function() {
-			toasty.pop.success({
-				title: 'Your comment has been successfully added!',
-				sound: false,
-				showClose: true,
-				clickToClose: false
-			});
-		};
-
 		// Sortable example
 		var i;
 		$scope.itemsList = {
