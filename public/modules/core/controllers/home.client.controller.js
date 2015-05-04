@@ -19,8 +19,8 @@ angular.module('core')
 		}; 
 
 		// Translation settings
-		$scope.changeLanguage = function (e, key) {
-			$translate.use(key);
+		$scope.changeLanguage = function (e, language) {
+			$translate.use(language);
 			var current = angular.element(e.currentTarget);
 			var languageOptions = angular.element($('.flag'));
 			angular.forEach(languageOptions, function(option) {
