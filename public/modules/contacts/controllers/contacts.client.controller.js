@@ -59,11 +59,9 @@ angular.module('contacts').controller('ContactsController', ['$scope', '$statePa
 		};
 
 		// Update existing Contact
-		$scope.update = function() {
-			var contact = $scope.contact;
-
+		$scope.update = function(contact) {
 			contact.$update(function() {
-				$location.path('contacts/' + contact._id);
+				$location.path('contacts');
 			}, function(errorResponse) {
 				$scope.error = errorResponse.data.message;
 			});
