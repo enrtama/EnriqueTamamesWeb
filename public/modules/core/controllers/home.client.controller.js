@@ -76,14 +76,12 @@ angular.module('core')
 					message: $scope.contact.message
 				});
 				contact.$save(function(response) {
-
 					toasty.pop.success({
 						title: 'Your message has been sent successfully!',
-						sound: true,
+						sound: false,
 						showClose: true,
 						clickToClose: false
 					});
-
 					$scope.username = '';
 					$scope.email = '';
 					$scope.message = '';
