@@ -11,10 +11,6 @@ body {
 	font-family: 'Raleway', sans-serif;	
 }
 
-textarea{
-	width: auto!important;
-}
-
 .footer {
 	position: fixed;
 	vertical-align: middle;

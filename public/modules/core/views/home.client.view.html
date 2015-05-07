@@ -1,6 +1,5 @@
 <section class="home" data-ng-controller="HomeController">
 	<toasty-container toasty-defaults='{"close-button":true}'></toasty-container>
-	
 	<div class="language-option inline">
 		<span class="flag selected" translate flag="'us'" flag-size="f32" ng-click="changeLanguage($event,'en')" ></span>
 		<span class="flag unselected" translate flag="'es'" flag-size="f32" ng-click="changeLanguage($event,'es')"></span>
@@ -107,23 +106,28 @@
 		<section id="section-3" class="section">
 			<br><h2 translate>MENU_CONTACT</h2>
 			<div class="jumbotron form-info">
-				<form name="form" ng-submit="submit(form)" ng-controller="SubmitController">
-					<div class="inner-addon left-addon">
+				<form name="form" ng-submit="submit(form)" ng-controller="SubmitController" novalidate>
+					<div class="inner-addon left-addon" ng-class="{ 'has-error' : form.username.$invalid && !form.username.$pristine}">
 						<i class="glyphicon glyphicon-user"></i>
-						<input name="username" type="text" class="form-control" placeholder="{{ 'USERNAME' | translate }}" data-ng-model="contact.username"/>
+						<input name="username" type="text" class="form-control" placeholder="{{ 'USERNAME' | translate }}" data-ng-model="contact.username" ng-minlength="3" required/>
+						<span ng-show="form.username.$error.minlength" class="help-block">Username is too short.</span>
+						<span ng-show="form.username.$error.required && !form.username.$pristine" class="help-block">Username is required.</span>
 					</div>
-					<div class="inner-addon left-addon">
+					<div class="inner-addon left-addon" ng-class="{ 'has-error' : form.email.$invalid && !form.email.$pristine}">
 						<i class="glyphicon glyphicon-envelope"></i>
-						<input name="email" type="email" class="form-control" placeholder="{{ 'EMAIL' | translate }}" data-ng-model="contact.email"/>
+						<input name="email" type="email" class="form-control" placeholder="{{ 'EMAIL' | translate }}" data-ng-model="contact.email" required/>
+						<span ng-show="form.email.$invalid && !form.email.$pristine" class="help-block">Enter a valid email.</span>
+						<span ng-show="form.email.$error.required && !form.email.$pristine" class="help-block">Email is required.</span>
 					</div>
-					<div class="inner-addon left-addon">
+					<div class="inner-addon left-addon" ng-class="{ 'has-error' : form.message.$invalid && !form.message.$pristine}">
 						<i class="glyphicon glyphicon-text-size"></i>
-						 <textarea name="message" class="form-control textarea" rows="5" placeholder="{{ 'MESSAGE' | translate }}" data-ng-model="contact.message"></textarea>
+						<textarea name="message" class="form-control textarea" rows="5" placeholder="{{ 'MESSAGE' | translate }}" data-ng-model="contact.message" required></textarea>
+						<span ng-show="form.message.$error.required && !form.message.$pristine" class="help-block">Message is required.</span>
 					</div>
 					<div class="form-actions">
 						<div class="inner-addon inline left-addon">
 							<i class="glyphicon glyphicon-send"></i>
-							<button class="btn btn-success btn-large" type="submit" translate>SEND_BUTTON</button>
+							<button class="btn btn-success btn-large" type="submit" ng-disabled="form.$invalid" translate>SEND_BUTTON</button>
 						</div>
 					</div>
 				</form>

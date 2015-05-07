@@ -1,7 +1,7 @@
 'use strict';
 
-angular.module('articles').controller('ArticlesController', ['$scope', '$stateParams', '$location', 'Authentication', 'Articles',
-	function($scope, $stateParams, $location, Authentication, Articles) {
+angular.module('articles').controller('ArticlesController', ['$scope', '$stateParams', '$location', 'Authentication', 'Articles', 'toasty',
+	function($scope, $stateParams, $location, Authentication, Articles, toasty) {
 		$scope.authentication = Authentication;
 
 		$scope.create = function() {
@@ -30,6 +30,12 @@ angular.module('articles').controller('ArticlesController', ['$scope', '$statePa
 				}
 			} else {
 				$scope.article.$remove(function() {
+					toasty.pop.success({
+						title: 'The article has been removed!',
+						sound: false,
+						showClose: true,
+						clickToClose: false
+					});
 					$location.path('articles');
 				});
 			}
@@ -37,6 +43,12 @@ angular.module('articles').controller('ArticlesController', ['$scope', '$statePa
 
 		$scope.update = function(article) {
 			article.$update(function() {
+				toasty.pop.success({
+					title: 'The article has been updated!',
+					sound: false,
+					showClose: true,
+					clickToClose: false
+				});
 				$location.path('articles');
 			}, function(errorResponse) {
 				$scope.error = errorResponse.data.message;

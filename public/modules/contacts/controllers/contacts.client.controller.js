@@ -1,8 +1,8 @@
 'use strict';
 
 // Contacts controller
-angular.module('contacts').controller('ContactsController', ['$scope', '$stateParams', '$location', 'Authentication', '$modal', 'Contacts', '$log',
-	function($scope, $stateParams, $location, Authentication, $modal, Contacts, $log) {
+angular.module('contacts').controller('ContactsController', ['$scope', '$stateParams', '$location', 'Authentication', '$modal', 'Contacts', '$log', 'toasty',
+	function($scope, $stateParams, $location, Authentication, $modal, Contacts, $log, toasty) {
 		$scope.authentication = Authentication;
 
 		// Create new Contact
@@ -48,8 +48,13 @@ angular.module('contacts').controller('ContactsController', ['$scope', '$statePa
 							$scope.contacts.splice(i, 1);
 						}
 					}
+					toasty.pop.success({
+						title: 'The contact has been deleted!',
+						sound: false,
+						showClose: true,
+						clickToClose: false
+					});
 				}, function () {
-					// $log.info('Modal dismissed at: ' + new Date());
 				});
 			} else {
 				$scope.contact.$remove(function() {
@@ -61,6 +66,12 @@ angular.module('contacts').controller('ContactsController', ['$scope', '$statePa
 		// Update existing Contact
 		$scope.update = function(contact) {
 			contact.$update(function() {
+				toasty.pop.success({
+					title: 'The contact has been updated!',
+					sound: false,
+					showClose: true,
+					clickToClose: false
+				});
 				$location.path('contacts');
 			}, function(errorResponse) {
 				$scope.error = errorResponse.data.message;
