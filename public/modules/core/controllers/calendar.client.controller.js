@@ -1,7 +1,6 @@
 'use strict';
 
-angular.module('core').controller('CalendarController', ['$scope', '$compile', 'uiCalendarConfig',
-	function($scope, $compile, uiCalendarCtrl) {
+angular.module('core').controller('CalendarController', ['$scope', '$compile', 'uiCalendarConfig', function($scope, $compile, uiCalendarCtrl) {
 		// Calendar controller logic
 		
 		var date = new Date();

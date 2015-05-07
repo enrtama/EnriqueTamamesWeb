@@ -3,9 +3,7 @@
 angular.module('core')
 	.value('duScrollDuration', 500)
 	.value('duScrollOffset', 30)
-	.controller('HomeController', ['$scope', 'Authentication', '$log', '$translate',
-		function($scope, Authentication, $log, $translate) {
-
+	.controller('HomeController', ['$scope', 'Authentication', '$log', '$translate', function($scope, Authentication, $log, $translate) {
 		// This provides Authentication context.
 		$scope.authentication = Authentication;
 		$scope.sections = angular.element($('.section').css('height', window.screen.availHeight));

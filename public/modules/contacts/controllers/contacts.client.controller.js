@@ -1,8 +1,7 @@
 'use strict';
 
 // Contacts controller
-angular.module('contacts').controller('ContactsController', ['$scope', '$stateParams', '$location', 'Authentication', '$modal', 'Contacts', '$log', 'toasty',
-	function($scope, $stateParams, $location, Authentication, $modal, Contacts, $log, toasty) {
+angular.module('contacts').controller('ContactsController', ['$scope', '$stateParams', '$location', 'Authentication', '$modal', 'Contacts', '$log', 'toasty', function($scope, $stateParams, $location, Authentication, $modal, Contacts, $log, toasty) {
 		$scope.authentication = Authentication;
 
 		// Create new Contact
