@@ -23,5 +23,9 @@
     "angular-ui-calendar": "latest",
     "ng-sortable": "~1.2.0",
     "ng-flags": "~0.0.1"
+  },
+  "resolutions": {
+    "angular": "~1.2",
+    "jquery": "~2.1.3"
   }
 }
