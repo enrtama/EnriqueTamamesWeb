@@ -1,7 +1,9 @@
 'use strict';
 
 module.exports = {
-	db: 'mongodb://localhost/enrtama-dev',
+	db: process.env.MONGOLAB_URI ||
+		process.env.MONGOHQ_URL ||
+		'mongodb://localhost/enrtama-dev',
 	app: {
 		title: 'enrtama - Development Environment'
 	},
