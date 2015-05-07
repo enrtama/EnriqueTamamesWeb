@@ -48,13 +48,13 @@ angular.module('contacts').controller('ContactsController', ['$scope', '$statePa
 							$scope.contacts.splice(i, 1);
 						}
 					}
-				}, function () {
 					toasty.pop.success({
 						title: 'The contact has been deleted!',
 						sound: false,
 						showClose: true,
 						clickToClose: false
 					});
+				}, function () {
 				});
 			} else {
 				$scope.contact.$remove(function() {
