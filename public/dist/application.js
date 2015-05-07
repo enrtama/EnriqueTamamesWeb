@@ -95,8 +95,7 @@ angular.module('articles').config(['$stateProvider',
 ]);
 'use strict';
 
-angular.module('articles').controller('ArticlesController', ['$scope', '$stateParams', '$location', 'Authentication', 'Articles', 'toasty',
-	function($scope, $stateParams, $location, Authentication, Articles, toasty) {
+angular.module('articles').controller('ArticlesController', ['$scope', '$stateParams', '$location', 'Authentication', 'Articles', 'toasty', function($scope, $stateParams, $location, Authentication, Articles, toasty) {
 		$scope.authentication = Authentication;
 
 		$scope.create = function() {
@@ -213,8 +212,7 @@ angular.module('contacts').config(['$stateProvider',
 'use strict';
 
 // Contacts controller
-angular.module('contacts').controller('ContactsController', ['$scope', '$stateParams', '$location', 'Authentication', '$modal', 'Contacts', '$log', 'toasty',
-	function($scope, $stateParams, $location, Authentication, $modal, Contacts, $log, toasty) {
+angular.module('contacts').controller('ContactsController', ['$scope', '$stateParams', '$location', 'Authentication', '$modal', 'Contacts', '$log', 'toasty', function($scope, $stateParams, $location, Authentication, $modal, Contacts, $log, toasty) {
 		$scope.authentication = Authentication;
 
 		// Create new Contact
@@ -414,8 +412,7 @@ angular.module('core').config(['$translateProvider',
 ]);
 'use strict';
 
-angular.module('core').controller('CalendarController', ['$scope', '$compile', 'uiCalendarConfig',
-	function($scope, $compile, uiCalendarCtrl) {
+angular.module('core').controller('CalendarController', ['$scope', '$compile', 'uiCalendarConfig', function($scope, $compile, uiCalendarCtrl) {
 		// Calendar controller logic
 		
 		var date = new Date();
@@ -548,16 +545,14 @@ angular.module('core').controller('CalendarController', ['$scope', '$compile', '
 ]);
 'use strict';
 
-angular.module('core').controller('FooterController', ['$scope',
-	function($scope) {
+angular.module('core').controller('FooterController', ['$scope', function($scope) {
 		// Footer controller logic
 		// ...
 	}
 ]);
 'use strict';
 
-angular.module('core').controller('HeaderController', ['$scope', 'Authentication', 'Menus',
-	function($scope, Authentication, Menus) {
+angular.module('core').controller('HeaderController', ['$scope', 'Authentication', 'Menus', function($scope, Authentication, Menus) {
 		$scope.authentication = Authentication;
 		$scope.isCollapsed = false;
 		$scope.menu = Menus.getMenu('topbar');
@@ -577,9 +572,7 @@ angular.module('core').controller('HeaderController', ['$scope', 'Authentication
 angular.module('core')
 	.value('duScrollDuration', 500)
 	.value('duScrollOffset', 30)
-	.controller('HomeController', ['$scope', 'Authentication', '$log', '$translate',
-		function($scope, Authentication, $log, $translate) {
-
+	.controller('HomeController', ['$scope', 'Authentication', '$log', '$translate', function($scope, Authentication, $log, $translate) {
 		// This provides Authentication context.
 		$scope.authentication = Authentication;
 		$scope.sections = angular.element($('.section').css('height', window.screen.availHeight));
@@ -675,9 +668,7 @@ angular.module('core')
 'use strict';
 
 angular.module('core')
-	.controller('ModalInstanceController', ['$scope', '$modalInstance', 'content', 
-	function($scope, $modalInstance, content) {
-
+	.controller('ModalInstanceController', ['$scope', '$modalInstance', 'content',  function($scope, $modalInstance, content) {
 		$scope.header = content.header;
 		$scope.body = content.body;
 		$scope.object = content.object;
@@ -685,11 +676,9 @@ angular.module('core')
 		$scope.ok = function () {
 			$modalInstance.close();
 		};
-
 		$scope.cancel = function () {
 			$modalInstance.dismiss('cancel');
 		};
-
 	}
 ]);
 'use strict';
@@ -935,8 +924,7 @@ angular.module('users').config(['$stateProvider',
 ]);
 'use strict';
 
-angular.module('users').controller('AuthenticationController', ['$scope', '$http', '$location', 'Authentication',
-	function($scope, $http, $location, Authentication) {
+angular.module('users').controller('AuthenticationController', ['$scope', '$http', '$location', 'Authentication', function($scope, $http, $location, Authentication) {
 		$scope.authentication = Authentication;
 
 		// If user is signed in then redirect back home
@@ -969,8 +957,7 @@ angular.module('users').controller('AuthenticationController', ['$scope', '$http
 ]);
 'use strict';
 
-angular.module('users').controller('PasswordController', ['$scope', '$stateParams', '$http', '$location', 'Authentication',
-	function($scope, $stateParams, $http, $location, Authentication) {
+angular.module('users').controller('PasswordController', ['$scope', '$stateParams', '$http', '$location', 'Authentication', function($scope, $stateParams, $http, $location, Authentication) {
 		$scope.authentication = Authentication;
 
 		//If user is signed in then redirect back home
@@ -1013,8 +1000,7 @@ angular.module('users').controller('PasswordController', ['$scope', '$stateParam
 ]);
 'use strict';
 
-angular.module('users').controller('SettingsController', ['$scope', '$http', '$location', 'Users', 'Authentication',
-	function($scope, $http, $location, Users, Authentication) {
+angular.module('users').controller('SettingsController', ['$scope', '$http', '$location', 'Users', 'Authentication', function($scope, $http, $location, Users, Authentication) {
 		$scope.user = Authentication.user;
 
 		// If user is not signed in then redirect back home
