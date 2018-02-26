@@ -1,16 +1,12 @@
-#!/bin/bash
-wget https://cli-assets.heroku.com/branches/stable/heroku-linux-amd64.tar.gz
-sudo mkdir -p /usr/local/lib /usr/local/bin
-sudo tar -xvzf heroku-linux-amd64.tar.gz -C /usr/local/lib
-sudo ln -s /usr/local/lib/heroku/bin/heroku /usr/local/bin/heroku
+#!/bin/sh -e
+APP_NAME=$1
 
-cat > ~/.netrc << EOF
-machine api.heroku.com
-  login $HEROKU_LOGIN
-  password $HEROKU_API_KEY
-EOF
+git remote add heroku git@heroku.com:$APP_NAME.git
+git fetch heroku
 
-cat >> ~/.ssh/config << EOF
-VerifyHostKeyDNS yes
-StrictHostKeyChecking no
-EOF
+PREV_WORKERS=$(heroku ps --app $APP_NAME | grep "^worker." | wc -l | tr -d ' ')
+
+# deploy code changes (and implicitly restart the app and any running workers)
+git push heroku $CIRCLE_SHA1:refs/heads/master
+
+heroku maintenance:off --app $APP_NAME
