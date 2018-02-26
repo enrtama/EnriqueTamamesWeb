@@ -1,6 +1,5 @@
 deployment:
   prod:
     branch: master
-    commands: "yarn run build"
     heroku:
       appname: enrtama
