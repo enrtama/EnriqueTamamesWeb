@@ -17,4 +17,4 @@ StrictHostKeyChecking no
 EOF
 
 # deploy code changes (and implicitly restart the app and any running workers)
-git push heroku master
+git push --force git@heroku.com:$HEROKU_APP_NAME.git HEAD:refs/heads/master
