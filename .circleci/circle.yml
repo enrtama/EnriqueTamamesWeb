@@ -1,6 +1,0 @@
-deployment:
-  production:
-    branch: production
-    commands:
-      - .circleci/setup-heroku.sh enrtama:
-          timeout: 300

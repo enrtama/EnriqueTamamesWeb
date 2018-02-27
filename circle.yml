@@ -1,0 +1,9 @@
+machine:
+  node:
+    version: "6.3.0"
+deployment:
+  production:
+    branch: master
+    commands: .circleci/setup-heroku.sh
+    heroku:
+      appname: enrtama
