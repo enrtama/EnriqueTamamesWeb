@@ -8,7 +8,7 @@ const Contact = (props) => {
     <Radar
       width={550}
       height={550}
-      padding={70}
+      padding={80}
       domainMax={10}
       highlighted={null}
       onHover={(point) => {
@@ -39,8 +39,8 @@ const Contact = (props) => {
               reduxsaga: 6,
               htmlcss: 9,
               testing: 6,
-              versionControlGit: 10,
-              responsiveDesign: 6,
+              versionControlGit: 9,
+              responsiveDesign: 7,
               buildingAutomationTools: 8,
             }
           }
