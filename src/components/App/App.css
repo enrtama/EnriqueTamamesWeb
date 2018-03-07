@@ -25,3 +25,7 @@
 .App-footer-icon {
   font-size: 40px;
 }
+
+.VerticalSlide {
+  width: 100% !important;
+}

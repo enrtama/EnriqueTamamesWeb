@@ -15,25 +15,21 @@ header {
   color: #fff;
   text-align: right;
   padding: 20px;
-}
-
-footer {
-  color: #fff;
-  text-align: center;
-  padding: 10px;
-}
-
-header {
-	background-color: black;
+	background-color: #101010;
 	opacity: 0.8;
 }
 
-header a{
+header a {
 	color: white;
 }
 
 footer {
-   color: #000;
+	position: fixed;
+	color: #fff;
+	padding: 10px;
+	bottom: 0;
+	text-align: center;
+	width: 100%;
 }
 
 a {
@@ -49,6 +45,10 @@ a {
 
 a.active {
   text-decoration: line-through;
+}
+
+a:hover {
+	text-decoration: none !important;
 }
 
 button {

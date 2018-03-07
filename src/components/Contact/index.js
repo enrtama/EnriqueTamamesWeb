@@ -26,7 +26,7 @@ const Contact = (props) => {
           {key: 'htmlcss', label: 'HTML/CSS'},
           {key: 'testing', label: 'Testing'},
           {key: 'versionControlGit', label: 'Version Control/Git'},
-          {key: 'responsiveDesign', label: 'Responsive Design'},
+          {key: 'responsiveDesign', label: 'Responsiveness'},
           {key: 'buildingAutomationTools', label: 'Building and Automation Tools'}
         ],
         sets: [

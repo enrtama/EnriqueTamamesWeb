@@ -2,9 +2,9 @@ import React from 'react';
 import { Row, Col } from 'reactstrap';
 
 import './styles.css';
-import mariaCover from 'assets/maria-cover.jpg';
-import layerglossCover from 'assets/layergloss-cover.png';
-import greenhouseCover from 'assets/greenhouse-cover.jpg';
+import mariaCover from '../../assets/maria-cover.jpg';
+import layerglossCover from '../../assets/layergloss-cover.png';
+import greenhouseCover from '../../assets/greenhouse-cover.jpg';
 
 const Portfolio = (props) => {
   return (

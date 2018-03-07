@@ -2,7 +2,7 @@ import React from 'react';
 import { Row, Col } from 'reactstrap';
 
 import './styles.css';
-import ProfilePicture from 'assets/enrtama.jpg';
+import ProfilePicture from '../../assets/enrtama.jpg';
 
 import MdEmail from 'react-icons/lib/md/email';
 import MdPhone from 'react-icons/lib/md/local-phone';
