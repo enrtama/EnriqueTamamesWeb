@@ -1,5 +1,6 @@
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/bd1290be8a5e45cbb30182aad1d6e45b)](https://www.codacy.com/app/enrtama/EnriqueTamamesWeb?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=enrtama/EnriqueTamamesWeb&amp;utm_campaign=Badge_Grade)
 [![CircleCI](https://circleci.com/gh/enrtama/EnriqueTamamesWeb.svg?style=svg)](https://circleci.com/gh/enrtama/EnriqueTamamesWeb)
+[![Codacy Badge](https://api.codacy.com/project/badge/Coverage/bd1290be8a5e45cbb30182aad1d6e45b)](https://www.codacy.com/app/enrtama/EnriqueTamamesWeb?utm_source=github.com&utm_medium=referral&utm_content=enrtama/EnriqueTamamesWeb&utm_campaign=Badge_Coverage)
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
