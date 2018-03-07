@@ -9,13 +9,14 @@ import MdPhone from 'react-icons/lib/md/local-phone';
 
 const About = (props) => {
   return (
-    <Row className="About">
+    <div className="About">
+    <Row>
       <Col xs="auto" className="About-profile-picture-section">
         <img src={ProfilePicture} className="About-profile-picture" alt="ProfilePicture" />
       </Col>
       <Col className="About-profile-info">
-      <div className="About-profile-title"><b>Enrique Tamames</b></div>
-      <div className="About-profile-subtitle"><b>Frontend Developer</b></div>
+        <div className="About-profile-title"><b>Enrique Tamames</b></div>
+        <div className="About-profile-subtitle"><b>Frontend Developer</b></div>
         <table id="about">
           <tbody><tr>
             <td><b>AGE</b></td>
@@ -36,6 +37,8 @@ const About = (props) => {
         </table>
       </Col>
     </Row>
+    <Row className="About-profile-description">I am a Frontend Developer for the last 5 years dedicated mainly to create apps in ReactJS (React + Redux). I also have experience with other flux implementations like Reflux and advanced redux implementation like Redux-Saga. Moreover I learned many other responsabilities along the way related to full stack web development like PHP, CI/CD, AWS, integration with Android/iOS having a role of SCRUM master of a small team.</Row>
+    </div>
   )
 }
 

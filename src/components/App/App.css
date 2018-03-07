@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  background-color: #f2f4f3;
 }
 
 .App-logo {
@@ -28,4 +29,12 @@
 
 .VerticalSlide {
   width: 100% !important;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  align-items: center;
+  justify-content: center;
 }

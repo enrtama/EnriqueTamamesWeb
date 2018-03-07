@@ -1,13 +1,21 @@
 import React from 'react';
-
 import Radar from 'react-d3-radar';
+import { Row, Col } from 'reactstrap';
+
+import './styles.css';
+import ReactPicture from '../../assets/react.png';
+import ReduxPicture from '../../assets/redux.png';
+import ReduxSagaPicture from '../../assets/redux-saga.png';
+import PHPPicture from '../../assets/php.png';
+import AWSPicture from '../../assets/aws.png';
+import GitPicture from '../../assets/git.png';
 
 const Contact = (props) => {
   return (
     <div>
     <Radar
       width={550}
-      height={550}
+      height={500}
       padding={80}
       domainMax={10}
       highlighted={null}
@@ -47,6 +55,14 @@ const Contact = (props) => {
         ]
       }}
     />
+    <Row>
+      <Col className="Contact-profile-skill"><img src={ReactPicture} alt="ReactPicture" width="100"/></Col>
+      <Col className="Contact-profile-skill"><img style={{margin: "-10px"}} src={ReduxPicture} alt="ReduxPicture" width="70"/></Col>
+      <Col className="Contact-profile-skill"><img style={{margin: "10px"}} src={ReduxSagaPicture} alt="ReduxSagaPicture" width="120"/></Col>
+      <Col className="Contact-profile-skill"><img style={{margin: "-25px 10px"}} src={PHPPicture} alt="PHPPicture" width="100"/></Col>
+      <Col className="Contact-profile-skill"><img style={{margin: "-5px"}} src={AWSPicture} alt="AWSPicture" width="100"/></Col>
+      <Col className="Contact-profile-skill"><img style={{margin: "5px"}} src={GitPicture} alt="GitPicture" width="100"/></Col>
+    </Row>
     </div>
   )
 }

@@ -18,8 +18,14 @@
 }
 
 .About-profile-picture {
-  height: 345px;
+  height: 280px;
   margin-top: 10px;
+}
+
+@media (max-width: 576px) {
+  .About-profile-picture {
+    height: 100px;
+  }
 }
 
 .About-profile-info {
@@ -32,13 +38,26 @@
   font-size: 35px;
 }
 
+.About-profile-description {
+  padding: 20px 35px 20px 35px;
+  text-align: left;
+  color: slategrey;
+}
+
+@media (max-width: 576px) {
+  .About-profile-description {
+    display: none !important;
+  }
+}
+
+
 .About-profile-subtitle {
   font-size: 14px;
   color: slategrey;
   margin-top: 2px;
-  margin-bottom: 25px;
-  padding-bottom: 20px;
-  border-bottom: 1px solid black;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid slategrey;
 }
 
 #about td {

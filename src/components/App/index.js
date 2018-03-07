@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Fullpage, Slide, HorizontalSlider } from 'fullpage-react';
+import { Fullpage, Slide } from 'fullpage-react';
 import { Container } from 'reactstrap';
 
 import About from '../About';
@@ -21,38 +21,17 @@ const fullPageOptions = {
   scrollSpeed: 500,
   hideScrollBars: true,
   enableArrowKeys: true
-};
-
-const horizontalSliderProps = {
-  name: 'horizontalSlider1', // name is required
-  infinite: true, // enable infinite scrolling
-};
-
-const horizontalSlides = [
-  <Slide> Slide 2.1 </Slide>,
-  <Slide> Slide 2.2 </Slide>
-];
-horizontalSliderProps.slides = horizontalSlides;
+}
 
 const slides = [
   <Slide><About /></Slide>,
   <Slide><Portfolio /></Slide>,
   <Slide><Contact /></Slide>
-];
+]
 fullPageOptions.slides = slides;
 
 class App extends Component {
   render() {
-    let options = {
-      sectionClassName: 'section',
-      anchors: ['about', 'portfolio', 'contact'],
-      scrollBar: false,
-      navigation: true,
-      verticalAlign: false,
-      sectionPaddingTop: '50px',
-      sectionPaddingBottom: '50px',
-      arrowNavigation: true
-    }
     return (
       <div className="App">
       <header>

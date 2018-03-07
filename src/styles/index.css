@@ -12,6 +12,8 @@ html {
 }
 
 header {
+	position: absolute;
+	width: 100%;
   color: #fff;
   text-align: right;
   padding: 20px;
