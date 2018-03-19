@@ -19,6 +19,7 @@ header {
   padding: 20px;
 	background-color: #101010;
 	opacity: 0.8;
+	z-index: 3;
 }
 
 header a {
