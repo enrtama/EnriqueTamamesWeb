@@ -38,7 +38,6 @@
     "react": "^16.2.0",
     "react-dev-utils": "^5.0.0",
     "react-dom": "^16.2.0",
-    "react-fullpage": "^0.1.18",
     "react-icons": "^2.2.7",
     "react-vertical-timeline-component": "^2.0.6",
     "reactstrap": "5.0.0-beta",
