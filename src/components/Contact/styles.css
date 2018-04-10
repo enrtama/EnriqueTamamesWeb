@@ -1,3 +1,5 @@
-.Contact-profile-skill {
-  
+@media (max-width: 768px) {
+  .Contact-profile-skill {
+      display: none;
+  }
 }

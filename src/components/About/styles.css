@@ -1,6 +1,7 @@
 .About {
-  margin: 80px auto;
+  margin: 70px auto 100px auto;
   min-height: 400px;
+  min-width: 335px;
   margin-right: 5px !important;
   margin-left: 5px !important;
   padding: 15px;
@@ -18,20 +19,25 @@
 }
 
 .About-profile-picture {
-  height: 280px;
-  margin-top: 10px;
+  height: 120px;
+  width: 120px;
+  margin-top: 190px;
+  border-radius: 50%;
 }
 
 @media (max-width: 576px) {
   .About-profile-picture {
     height: 100px;
+    width: 100px;
   }
 }
 
 .About-profile-info {
   float: right;
-  width: 350px;
+  min-width: 350px;
   text-align: left;
+  padding-left: 35px !important;
+  padding-right: 35px !important;
 }
 
 .About-profile-title {
@@ -44,12 +50,11 @@
   color: slategrey;
 }
 
-@media (max-width: 576px) {
+@media (max-width: 667px) {
   .About-profile-description {
     display: none !important;
   }
 }
-
 
 .About-profile-subtitle {
   font-size: 14px;

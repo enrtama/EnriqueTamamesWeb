@@ -2,7 +2,6 @@ import React from 'react';
 import { Row, Col } from 'reactstrap';
 
 import './styles.css';
-import ProfilePicture from '../../assets/enrtama.jpg';
 
 import MdEmail from 'react-icons/lib/md/email';
 import MdPhone from 'react-icons/lib/md/local-phone';
@@ -11,9 +10,6 @@ const About = (props) => {
   return (
     <div className="About">
     <Row>
-      <Col xs="auto" className="About-profile-picture-section">
-        <img src={ProfilePicture} className="About-profile-picture" alt="ProfilePicture" />
-      </Col>
       <Col className="About-profile-info">
         <div className="About-profile-title"><b>Enrique Tamames</b></div>
         <div className="About-profile-subtitle"><b>Frontend Developer</b></div>

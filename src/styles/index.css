@@ -1,6 +1,6 @@
 html,
 body {
-	margin: 0;
+  margin: 0;
   font-family: arial,helvetica;
 }
 
@@ -12,27 +12,31 @@ html {
 }
 
 header {
-	position: absolute;
-	width: 100%;
+  position: relative;
+  width: 100%;
   color: #fff;
   text-align: right;
   padding: 20px;
-	background-color: #101010;
-	opacity: 0.8;
-	z-index: 3;
+  background-color: #101010;
+  z-index: 3;
+  background-image: url("https://d2gn4xht817m0g.cloudfront.net/p/profiles/cover_photos/background/007/556/991/7556991-63376479697dbfd8ee28ce6323612820ffe22558.jpg?1521470539");
+  height: 280px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 header a {
-	color: white;
+  color: white;
 }
 
 footer {
-	position: fixed;
-	color: #fff;
-	padding: 10px;
-	bottom: 0;
-	text-align: center;
-	width: 100%;
+  position: fixed;
+  color: #fff;
+  padding: 10px;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
 }
 
 a {
@@ -51,10 +55,21 @@ a.active {
 }
 
 a:hover {
-	text-decoration: none !important;
+  text-decoration: none !important;
 }
 
 button {
   width: 50px;
   padding: 8px;
+}
+
+.recharts-wrapper {
+  width: 100% !important;
+}
+
+@media (max-width: 768px) {
+  .recharts-surface {
+    width: 100%;
+    height: 100%;
+  }
 }
